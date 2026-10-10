@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyakorló feladat – Osztálykirándulás</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --paper: #fafaf9;
+      --card: #ffffff;
+      --accent: #9a3412;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+    header {
+      background: #292524;
+      color: #fafaf9;
+      padding: 2.2rem 1.25rem 1.6rem;
+    }
+    header p, main, footer { max-width: 46rem; margin-left: auto; margin-right: auto; }
+    header p { margin: 0.35rem auto 0; color: #d6d3d1; }
+    h1 { max-width: 46rem; margin: 0 auto; font-size: 2rem; line-height: 1.2; }
+    main { padding: 1.5rem 1.25rem 3rem; }
+    h2 {
+      font-size: 1.35rem;
+      margin: 1.4rem 0 0.6rem;
+    }
+    h3 { font-size: 1.05rem; margin: 1.2rem 0 0.4rem; }
+    p, li { font-size: 1.05rem; }
+    .lead { font-size: 1.15rem; }
+    .meta { color: var(--muted); font-family: "Segoe UI", sans-serif; font-size: 0.95rem; }
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.2rem 1.25rem 1.1rem;
+      margin-top: 1rem;
+    }
+    table { border-collapse: collapse; width: 100%; margin: 0.6rem 0 1rem; }
+    th, td { border: 1px solid #d6d3d1; padding: 0.4rem 0.6rem; text-align: left; }
+    th { background: #f5f5f4; }
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.92em;
+      background: #f5f5f4;
+      padding: 0.05em 0.3em;
+    }
+    .dont { background: #fff7ed; }
+    ol.checklist li { margin: 0.25rem 0; }
+    footer { padding: 0 1.25rem 2rem; color: var(--muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Osztálykirándulás</h1>
+    <p>Gyakorló feladat a HTML alapokhoz, a 10. leckéig.</p>
+  </header>
+
+  <main>
+    <p class="lead">Egyetlen weboldalt készítesz: a 11. évfolyam szegedi kirándulásának tájékoztatóját, alul a jelentkezési űrlappal. CSS-t még ne használj. A szöveg a tiéd, a tényeket lent megkapod.</p>
+    <p class="meta">Egy tanóra, ha kell, otthon befejezhető. A fájl neve: <code>index.html</code></p>
+
+    <section>
+      <h2>A helyzet</h2>
+      <p>Az osztály egynapos kirándulásra megy Szegedre. Az oldal elmondja, mikor indulunk, mi a program, mit hozzanak, mennyibe kerül, és a végén jelentkezni lehet.</p>
+      <p>Ezeket az adatokat építsd be. A mondatokat magad fogalmazd meg.</p>
+      <table>
+        <tr><th>Hova</th><td>Szeged</td></tr>
+        <tr><th>Mikor</th><td>2026. október 16., péntek</td></tr>
+        <tr><th>Gyülekező</th><td>6:30, az iskola udvara</td></tr>
+        <tr><th>Indulás</th><td>6:45</td></tr>
+        <tr><th>Hazaérkezés</th><td>kb. 18:00</td></tr>
+        <tr><th>Kísérő tanár</th><td>Kovács Anna, anna.kovacs@iskola.hu</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>A fájl</h2>
+      <ul>
+        <li>Készíts egy <code>kirandulas</code> mappát.</li>
+        <li>A fájl neve <code>index.html</code> legyen: szóköz és ékezet nélkül.</li>
+        <li>A karakterkódolás UTF-8.</li>
+        <li>Tegyél a mappába legalább egy képet Szegedről, például <code>szeged.jpg</code> néven.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Amit az oldal tartalmazzon</h2>
+
+      <h3>1. A dokumentum váza</h3>
+      <p>Legyen dokumentumtípus, a nyelv magyar, a fejlécben karakterkódolás, és a böngésző fülnévén is látszódjon, hogy ez a szegedi kirándulás oldala.</p>
+
+      <h3>2. Szöveg</h3>
+      <ul>
+        <li>Egy főcím, alatta szakaszcímek. A főcímből csak egy legyen.</li>
+        <li>Rövid bevezető bekezdés. Legyen benne egy félkövér és egy dőlt kiemelés.</li>
+        <li>Egy rövid idézet a kísérő tanártól, idézetként jelölve.</li>
+        <li>Az oldal alján a neved és az év, a copyright jel HTML-entitással.</li>
+      </ul>
+
+      <h3>3. Program és csomag</h3>
+      <p>A nap programja számozott lista, legalább öt ponttal. Az egyik pont alatt legyen egy beágyazott felsorolás. Javasolt program, a sorrendet megtarthatod:</p>
+      <ol>
+        <li>Utazás Szegedre</li>
+        <li>Dóm tér és a Fogadalmi templom</li>
+        <li>Móra Ferenc Múzeum, és alatta két alpont: állandó kiállítás, időszaki kiállítás</li>
+        <li>Ebéd a belvárosban</li>
+        <li>Hazautazás</li>
+      </ol>
+      <p>Külön, pontozott listában: mit hozzanak magukkal. Legalább négy tétel, például személyi igazolvány, innivaló, esőkabát, kényelmes cipő.</p>
+
+      <h3>4. Tudnivalók</h3>
+      <p>Leíró lista három elemmel: Gyülekező, Indulás, Kísérő tanár. A kísérő neve e-mail hivatkozás legyen, a fenti címre.</p>
+
+      <h3>5. Háromféle hivatkozás</h3>
+      <ul>
+        <li>A bevezetőből egy link ugorjon le a jelentkezési űrlaphoz.</li>
+        <li>A kísérő tanár e-mail címe levélküldő hivatkozás legyen.</li>
+        <li>Egy külső, teljes című link mutasson Szeged Wikipédia-oldalára: <code>https://hu.wikipedia.org/wiki/Szeged</code></li>
+      </ul>
+
+      <h3>6. Kép</h3>
+      <p>A városról szóló kép a html fájl mellől töltődjön be, relatív útvonallal. Az alt szöveg mondja el, mi látszik a képen. Ne legyen üres, és ne az legyen, hogy „kép”.</p>
+
+      <h3>7. Költségek táblázatban</h3>
+      <table>
+        <tr><th>Tétel</th><th>Ár</th></tr>
+        <tr><td>Utazás</td><td>2500 Ft</td></tr>
+        <tr><td>Belépő</td><td>1800 Ft</td></tr>
+        <tr><td>Ebéd</td><td>2200 Ft</td></tr>
+        <tr><td colspan="2">Összesen: 6500 Ft</td></tr>
+      </table>
+      <p>A fejléc cellák valódi fejléc cellák legyenek. Az utolsó sor egy cellája fogja át mindkét oszlopot.</p>
+
+      <h3>8. Jelentkezési űrlap</h3>
+      <p>Az űrlap a <code>https://httpbin.org/post</code> címre küldjön, POST módszerrel. Három szakaszra oszd. Minden szakasznak legyen kerete és felirata a keret vonalában.</p>
+      <p><strong>Személyes adatok</strong></p>
+      <ul>
+        <li>Név, kötelező szövegmező.</li>
+        <li>E-mail, kötelező, e-mail típusú mező.</li>
+        <li>Telefon, telefonszám típusú mező, helyőrzőként egy minta: +36 30 123 4567.</li>
+        <li>Hány fővel jössz (magadat is beleértve): számmező, alapértéke 1, legkisebb 1, legnagyobb 4, kötelező.</li>
+      </ul>
+      <p><strong>Melyik buszra ülsz?</strong></p>
+      <ul>
+        <li>Két rádiógomb, pontosan egy választható. A szakasz felirata maga a kérdés.</li>
+        <li>Mindkettőnek legyen beszédes értéke, az egyik legyen előre kiválasztva.</li>
+      </ul>
+      <p><strong>Egyéb</strong></p>
+      <ul>
+        <li>Étkezés, legördülő lista, kötelező. Az első elem üres értékű, felirata: -- válassz --. Utána három lehetőség, mindegyiken rövid érték: húsos menü, vegetáriánus menü, hozok magamnak ételt.</li>
+        <li>Extra program, több is választható: várlátogatás és sétahajózás a Tiszán. Mindkettőnek legyen saját értéke.</li>
+        <li>Megjegyzés: több soros szövegmező, üresen induljon, körülbelül négy sor magas legyen.</li>
+      </ul>
+      <p>A szakaszok után egy külön jelölőnégyzet, kötelező: a szülő tud a kirándulásról. Az értéke <code>igen</code> legyen.</p>
+      <p>Minden mezőnek legyen felirata, ami a mező egyedi azonosítójára mutat, és legyen neve, ami elküldéskor utazik. A küldőgomb felirata: Jelentkezem. A típusát írd ki.</p>
+    </section>
+
+    <section class="dont">
+      <h2>Ezt hagyd ki</h2>
+      <ul>
+        <li>CSS, div és span. Azokat később vesszük.</li>
+        <li>Alaphelyzet gomb. Véletlen kattintásra kitörölné a kitöltést.</li>
+        <li>A több soros mezőnek ne adj value attribútumot, és ne legyen sortörés a nyitó és a záró tagja között.</li>
+        <li>A két rádiógombnak ugyanaz a neve legyen. Külön névvel mindkettő bejelölhető marad.</li>
+        <li>Jelölőnégyzet, rádiógomb és listaopció érték nélkül ne maradjon: különben a böngésző az „on” szót, vagy a látható feliratot küldi el.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mielőtt késznek jelented</h2>
+      <ol class="checklist">
+        <li>Megnyílik a böngészőben, az ékezetek rendben vannak.</li>
+        <li>A „jelentkezés” link az űrlaphoz ugrik, a külső link Szeged oldalára visz, az e-mail link levelet írna.</li>
+        <li>A kép megjelenik, és ha nem töltődik be, az alt szöveg akkor is értelmes.</li>
+        <li>A két busz közül egyszerre csak az egyik választható.</li>
+        <li>Az extrák közül több is bepipálható, és ki is kapcsolhatók.</li>
+        <li>Üresen elküldve a böngésző megáll a kötelező mezőknél, a szülős jelölőnégyzetnél is.</li>
+        <li>A feliratra kattintva is a hozzá tartozó mezőbe kerül a kurzor.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>HTML alapok, 3–10. lecke. Megjelenést még nem értékelünk.</p>
+  </footer>
+</body>
+</html>
